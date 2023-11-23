@@ -28,8 +28,8 @@ def drop_unwanted_data(df: pd.DataFrame):
 
 def split_types(df: pd.DataFrame):
     # Следующий этап - разделим на письма и эссе
-    essay_df = df[data[' Type'] == 'Essay']
-    email_df = df[data[' Type'] == 'Email']
+    essay_df = df[df[' Type'] == 'Essay']
+    email_df = df[df[' Type'] == 'Email']
 
     # и удалим лишние колонки для каждого типа
     essay_df = essay_df.drop(columns='Use of English (for emails)')
@@ -41,11 +41,6 @@ def split_types(df: pd.DataFrame):
     email_df = email_df.dropna()
 
     return essay_df, email_df
-
-raw_data = read_from_gsheet()
-data = drop_unwanted_data(raw_data)
-_, email_data = split_types(data)
-print(email_data.info())
 
 
 
