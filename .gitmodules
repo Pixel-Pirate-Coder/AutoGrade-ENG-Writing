@@ -1,0 +1,3 @@
+[submodule "autograde_api"]
+	path = autograde_api
+	url = https://github.com/MaxAndreyko/autograde_api.git
