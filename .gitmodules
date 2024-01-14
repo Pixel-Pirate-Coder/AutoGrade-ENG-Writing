@@ -1,0 +1,6 @@
+[submodule "production/autograde_api"]
+	path = production/autograde_api
+	url = https://github.com/MaxAndreyko/autograde_api.git
+[submodule "production/EGE-Writing-Autograde-Bot"]
+	path = production/EGE-Writing-Autograde-Bot
+	url = https://github.com/AlbinaBurlova/EGE-Writing-Autograde-Bot.git
