@@ -4,3 +4,6 @@
 [submodule "production/EGE-Writing-Autograde-Bot"]
 	path = production/EGE-Writing-Autograde-Bot
 	url = https://github.com/AlbinaBurlova/EGE-Writing-Autograde-Bot.git
+[submodule "production/Streamlit-for-autograde-eng-letter"]
+	path = production/Streamlit-for-autograde-eng-letter
+	url = https://github.com/Pixel-Pirate-Coder/Streamlit-for-autograde-eng-letter.git
