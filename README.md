@@ -10,6 +10,13 @@
 - [Fine-tuned BERT](https://disk.yandex.ru/d/5MBlWdXOSiJWuw)
 - [FLAN-T5](https://disk.yandex.ru/d/m8rbGP77RMLoBg)
 
+ Streamlit-приложение:  
+ https://app-for-autograde-eng-letter.streamlit.app 
+
+ Telegram bot:  
+ https://t.me/letter_checker_bot
+
+
  Создан сервис (API) и подключенный к нему UI (streamlit-приложение и телеграм-бот), которые оценивабт ответы к заданиям части Writing в ЕГЭ по английскому языку, выставляя баллы по критериям ЕГЭ. Всего 2 задания разного формата, для которых необходимо предоставить письменный ответ в соответствии с критериями задания. 
 
 - Задание 1: «Электронное письмо личного характера».  
