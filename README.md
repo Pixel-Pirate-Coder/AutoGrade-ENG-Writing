@@ -1,7 +1,7 @@
 # Оценка уровня Writing по критериям ЕГЭ
 
- Куратор: Вольф Елена  
- Студенты: Бурлова Альбина, Андрейко Максим, Василенко Павел.
+ **Куратор**: Вольф Елена  
+ **Студенты**: Бурлова Альбина, Андрейко Максим, Василенко Павел.
 
 Письмо ЕГЭ по английскому языку — одно из заданий с развернутым ответом письменной части экзамена. Данное задание содержит отрывок письма от друга по переписке. Предлагается написать ответ с соблюдением определенных критериев:
 
@@ -14,21 +14,22 @@
 
  Создан сервис (API) и подключенный к нему UI (streamlit-приложение и телеграм-бот), которые оценивабт ответы к заданиям части Writing в ЕГЭ по английскому языку, выставляя баллы по критериям ЕГЭ. 
 
-Ссылки:
+**Ссылки**:
 
-- [Dataset](https://docs.google.com/spreadsheets/d/1m0mc1H7ULIZ2HEkT4dha_XRmRjt0gWJ8aht_GJ2lxfw/edit#gid=0);
-- [Streamlit app](https://app-for-autograde-eng-letter.streamlit.app);
-- [Telegram bot](https://t.me/letter_checker_bot);
-- [Generated Data - OpenAI API](https://disk.yandex.ru/d/j9CCiZQFpZMTPQ);
-- [Fine-tuned BERT](https://disk.yandex.ru/d/5MBlWdXOSiJWuw), [FLAN-T5](https://disk.yandex.ru/d/m8rbGP77RMLoBg);
-- [Presentation](https://docs.google.com/presentation/d/1EMiHkaB_kKYvVICD9-9Y8n7eeou9bSIYI5NnJ4Nqhmo/edit?usp=sharing).
+- [Dataset](https://docs.google.com/spreadsheets/d/1m0mc1H7ULIZ2HEkT4dha_XRmRjt0gWJ8aht_GJ2lxfw/edit#gid=0)
+- [EDA](https://app-for-autograde-eng-letter.streamlit.app)
+- [Streamlit app](https://app-for-autograde-eng-letter.streamlit.app)
+- [Telegram bot](https://t.me/letter_checker_bot)
+- [Generated Data - OpenAI API](https://disk.yandex.ru/d/j9CCiZQFpZMTPQ)
+- [Fine-tuned BERT](https://disk.yandex.ru/d/5MBlWdXOSiJWuw), [FLAN-T5](https://disk.yandex.ru/d/m8rbGP77RMLoBg)
+- [Presentation](https://docs.google.com/presentation/d/1EMiHkaB_kKYvVICD9-9Y8n7eeou9bSIYI5NnJ4Nqhmo/edit?usp=sharing)
 
 # Демонстрация работы сервиса
 
-Streamlit:  
+**Streamlit**:  
 ![](https://github.com/Pixel-Pirate-Coder/AutoGrade-ENG-Writing/blob/main/images/streamlit.gif)
 
-Telegram bot:  
+**Telegram bot**:  
 ![](https://github.com/Pixel-Pirate-Coder/AutoGrade-ENG-Writing/blob/main/images/tg_bot.gif)
 
 # Архитектура сервиса
