@@ -25,9 +25,11 @@
 
 # Демонстрация работы сервиса
 
-![]()
+Streamlit:  
+![](https://github.com/Pixel-Pirate-Coder/AutoGrade-ENG-Writing/blob/main/images/streamlit.gif)
 
-![]()
+Telegram bot:  
+![](https://github.com/Pixel-Pirate-Coder/AutoGrade-ENG-Writing/blob/main/images/tg_bot.gif)
 
 # Архитектура сервиса
  ![Архитектура сервиса](images/service_diagram.png)
