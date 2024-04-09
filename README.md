@@ -40,15 +40,16 @@
 
     ├── LICENSE
     ├── README.md                                <- Описание проекта
-    ├── data
-    │   ├── interim                              <- Intermediate data that has been transformed.
-    │   ├── processed                            <- The final, canonical data sets for modeling.
-    │   └── raw                                  <- The original, immutable data dump.
+    ├── setup.py                                 <- Файл для установки проекта как пакета, содержит информацию о версии,
+    │                                                описании, авторах и лицензии
+    ├── Checkpoint.pdf                           <- Презентация проекта
     │
     │
-    ├── notebooks                                <- Jupyter-ноутбуки. Правила наименования: номер (для учета порядка),
-    │                                               инициалы автора, и через `-` краткое название, например
-    │                                               `1.0-jqp-initial-data-exploration`.
+    ├── src/data                                 <- Код для парсинга, чтения, загрузки данных
+    │   ├── __init__.py                          <- Для инициализации папки как модуля
+    │   ├── parser_email_cloudtext.py            <- Парсер писем с ресурса cloudtext
+    │   ├── parser_emails_reshu_ege.py           <- Парсер писем с ресурса РЕШУ ЕГЭ
+    │   └── read_raw_data.py                     <- Чтение данных из gsheet
     │
     │
     ├── production                               <- Git-субмодули с исходным кодом сервисов продуктивизации
@@ -56,16 +57,16 @@
     │   ├── EGE-Writing-Autograde-Bot            <- Телеграм-бот для проверки писем
     │   └── Streamli-for-autograde-eng-letter    <- Web-UI для использования модели, и EDA
     │
-    │ 
-    ├── src                                      <- Исходный код
-    │   ├── __init__.py                          <- Для инициализации папки как модуля
-    │   │
-    │   └── data                                 <- Код для парсинга, чтения, загрузки данных
-    │       ├── parser_email_cloudtext.py        <- Парсер писем с ресурса cloudtext
-    │       ├── parser_emails_reshu_ege.py       <- Парсер писем с ресурса РЕШУ ЕГЭ
-    │       └──read_raw_data.py                  <- Чтение данных из gsheet
     │
-    └── tox.ini                                   <- tox файл настроек для запуска tox; см. tox.readthedocs.io
+    ├── notebooks                                <- Jupyter-ноутбуки 
+    │   ├── eda                                  <- Разведочный анализ данных
+    │   ├── model_selection                      <- Ноутбуки с подбором моделей
+    │   ├── openai_api                           <- Генерация данных с помощью OpenAI API
+    │   ├── parsing                              <- Ноутбуки с парсингом данных
+    │   └── email_data.csv                       <- Рабочий датасет
+    │
+    │
+    └── images                                   <- Изображения, использованные в README.md
 
 
 --------
