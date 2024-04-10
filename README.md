@@ -55,7 +55,8 @@
     ├── production                               <- Git-субмодули с исходным кодом сервисов продуктивизации
     │   ├── autograde_api                        <- API-сервис для обработки запросов
     │   ├── EGE-Writing-Autograde-Bot            <- Телеграм-бот для проверки писем
-    │   └── Streamli-for-autograde-eng-letter    <- Web-UI для использования модели, и EDA
+    │   ├── Streamli-for-autograde-eng-letter    <- Web-UI для использования модели, и EDA
+    │   └── docker-compose.yaml                  <- Файл docker-compose для распаковки всего проекта
     │
     │
     ├── notebooks                                <- Jupyter-ноутбуки 
