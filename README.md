@@ -22,7 +22,8 @@
 - [Telegram bot](https://t.me/letter_checker_bot)
 - [Generated Data - OpenAI API](https://disk.yandex.ru/d/j9CCiZQFpZMTPQ)
 - [Fine-tuned BERT](https://disk.yandex.ru/d/5MBlWdXOSiJWuw), [FLAN-T5](https://disk.yandex.ru/d/m8rbGP77RMLoBg)
-- [Presentation](https://docs.google.com/presentation/d/1XN5nZ7-APyK1UBGcBQUd1PHvc88DmyqGRYKAIUfePZ4/edit#slide=id.g2be239d379d_0_45)
+- [Presentation_checkpoint](https://docs.google.com/presentation/d/1PtJqikiQ3EUEXvgTK1vLnINgrxvi6gEi4r01fm_CkXY/edit?usp=sharing)
+- [Presentation_final](https://docs.google.com/presentation/d/1XN5nZ7-APyK1UBGcBQUd1PHvc88DmyqGRYKAIUfePZ4/edit#slide=id.g2be239d379d_0_45)
 
 # Демонстрация работы сервиса
 
