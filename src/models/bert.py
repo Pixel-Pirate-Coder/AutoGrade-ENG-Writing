@@ -89,7 +89,7 @@ class BERTFinetune(nn.Module):
 
         
 class BERTDataset(Dataset):
-    def __init__(self, input: Union[List[str], ], labels: List[Union[int, float]], tokenizer, max_length=512,
+    def __init__(self, input: List[str], labels: List[Union[int, float]], tokenizer, max_length=512,
                  padding: Literal[True, False, "max_length"] = "max_length",
                  truncation: Literal[True, False] = True):
         self.labels = torch.tensor(labels, dtype=torch.float)
