@@ -4,6 +4,7 @@ import torch.nn as nn
 from torch.utils.data import Dataset, TensorDataset, DataLoader, random_split, RandomSampler, SequentialSampler
 from transformers import get_linear_schedule_with_warmup, BertTokenizer, BertModel, BertConfig
 
+
 class BERTFinetune(nn.Module):
     """
         BERT for classification tasks
@@ -20,9 +21,11 @@ class BERTFinetune(nn.Module):
 
         super().__init__()
         self.bert = BertModel.from_pretrained(model_name)
+        self.model_name = model_name
         self.pooling_type = pooling_type
 
         self.linear = nn.Linear(dim_in, dim_out)
+        self.sigmoid = nn.Sigmoid()
         self.dropout = nn.Dropout(p_dropout)
 
         # Freeze the BERT model
@@ -35,7 +38,7 @@ class BERTFinetune(nn.Module):
                 torch.nn.init.xavier_uniform_(m.weight)
                 m.bias.data.fill_(0.01)
 
-        self.linear.apply(init_weights)
+        self.linear.apply(init_weights)        
 
     def forward(self, input_ids, attention_mask):
         """
@@ -75,21 +78,21 @@ class BERTFinetune(nn.Module):
             
         else:
             last_hidden_state = outputs[0][:, 0, :] # -> torch.Size([1, 768])
-            last_hidden_state = last_hidden_state.unsqueeze(1) # Add dimension to match further layers size -> torch.Size([1, 1, 768])
-            linear = self.linear(last_hidden_state)
+            # last_hidden_state = last_hidden_state.unsqueeze(1) # Add dimension to match further layers size -> torch.Size([1, 1, 768])
+            linear = self.linear(last_hidden_state).squeeze(1)
 
         output = self.dropout(linear)
 
-        output = nn.Sigmoid(output)
+        output = self.sigmoid(output)
 
         return output
 
-
+        
 class BERTDataset(Dataset):
-    def __init__(self, input: List[str], labels: List[Union[int, float]], tokenizer, max_length=512,
-                 padding: Literal[True, False, "max_length"] = False,
+    def __init__(self, input: Union[List[str], ], labels: List[Union[int, float]], tokenizer, max_length=512,
+                 padding: Literal[True, False, "max_length"] = "max_length",
                  truncation: Literal[True, False] = True):
-        self.labels = torch.tensor(labels)
+        self.labels = torch.tensor(labels, dtype=torch.float)
         self.input_ids, self.attn_masks = self.tokenize_function(input=input, tokenizer=tokenizer, max_length=max_length, padding=padding, truncation=truncation)
     
     def tokenize_function(self,
@@ -112,6 +115,18 @@ class BERTDataset(Dataset):
 
         return input_ids, attention_masks
 
+    @property
+    def __max__(self) -> Union[None, float, int]:
+        if not self.labels.numel():
+            return None
+        return torch.max(self.labels).item()
+    
+    @property
+    def __min__(self) -> Union[None, float, int]:
+        if not self.labels.numel():
+            return None
+        return torch.min(self.labels).item()
+    
     def __len__(self):
         return len(self.input_ids)
 
